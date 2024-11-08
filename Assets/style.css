@@ -1,0 +1,783 @@
+/* VARIABLES */
+:root {
+    /* COLORS */
+    --black: #000000;
+    --oxford-blue: #14213d;
+    --orange-web: #fca311;
+    --platinum: #e5e5e5;
+    --white: #ffffff;
+
+    /* Alternative HSL color variables (optional) */
+    --black-hsl: hsla(0, 0%, 0%, 1);
+    --oxford-blue-hsl: hsla(221, 51%, 16%, 1);
+    --orange-web-hsl: hsla(37, 98%, 53%, 1);
+    --platinum-hsl: hsla(0, 0%, 90%, 1);
+    --white-hsl: hsla(0, 0%, 100%, 1);
+
+    /* FONT VARIABLES */
+    --title-font: 'Inria Serif', sans-serif;
+    --body-font: 'Zen Kaku Gothic New', sans-serif;
+  }
+
+
+/* Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--orange-web);
+}
+
+ul{
+    list-style: none;
+}
+
+body , html{
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    font-size: 3em;
+    color: var(--black);
+    font-weight: bold;
+}
+
+h2{
+    font-family: var(--body-font);
+    text-transform: capitalize;
+    font-size: 2em;
+    color: var(--orange-web);
+    font-weight: bold;
+}
+
+h3{
+    font-family: var(--title-font);
+    font-size: 1.5em;
+    color: var(--oxford-blue);
+    font-weight: bold;
+}
+
+p{
+    font-family: var(--body-font);
+    color: var(--oxford-blue);
+}
+
+/* NAVBAR */
+.navbar{
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.navbar img{
+    height: 100px;
+}
+
+.nav--links{
+    display: flex;
+    align-items: center;
+    color: var(--oxford-blue);
+    font-family: var(--body-font);
+    font-weight: bold;
+}
+
+.sm--links{
+    display: flex;
+    align-items: center;
+}
+
+.nav--links li{
+    margin: 0 30px;
+}
+
+.sm--links li{
+    margin: 0 5px;
+    font-size: 25px;
+    color: var(--oxford-blue);
+    text-decoration: none;
+}
+
+.nav--links a,
+.sm--links a {
+    color: var(--oxford-blue);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the navigation links */
+.nav--links a:hover {
+    color: var(--orange-web); /* Change to desired hover color */
+    transform: scale(1.05); /* Slight scaling effect */
+    text-decoration: underline;
+}
+
+/* Hover effect for social media icons */
+.sm--links a:hover {
+    color: var(--orange-web); /* Change color for social media icon hover */
+    transform: scale(1.2); /* Larger scaling effect for icons */
+}
+
+/* Header */
+
+header{
+    position: relative; /* To allow positioning of the overlay */
+    width: 100vw;
+    height: 80vh;
+    background-image: url(./images/hero.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the overlay fills the header */
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 33, 61, .4); /* Adjust opacity for transparency */
+    z-index: 1;
+}
+
+.header--content{
+    position: relative; /* To position content above overlay */
+    z-index: 2;
+    margin-bottom: 150px;
+    color: var(--platinum);
+    text-align: center;
+}
+
+.header--content h1{
+    font-family: var(--tittle-font);
+    color: #ffffff;
+}
+
+.header--content p{
+    font-family: var(--body-font);
+    margin-bottom: 50px;
+    color: var(--platinum);
+    font-size: 24px;
+    font-style: italic;
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background: var(--orange-web);
+    margin: 10px auto;s
+    border-radius: 5px;
+}
+
+.header--content h1{
+    font-size: 64px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.ctn{
+    padding: 10px 30px;
+    background-color: var(--orange-web);
+    border-radius: 5px;
+    color: var(--oxford-blue);
+    font-family: var(--body-font);
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: initial;
+    font-weight: bold;
+}
+
+.ctn:hover{
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+    text-transform: uppercase;
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+.menu--btn{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--oxford-blue);
+}
+
+/* VALORES */
+
+.acerca--de{
+    display: flex;
+    margin: 50px 10px;
+}
+
+.col--texto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto 20px;
+    height: 100%;
+}
+
+.col--galeria{
+    display: flex;
+    width: 50%;
+    margin: auto 20px;
+    height: 100%;
+}
+
+.galeria{
+    flex: 33%;
+    padding: 4px;
+
+}
+
+.galeria img{
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* .col--galeria .galeria:nth-child(1) img {
+    margin-top: 25px;
+}
+.col--galeria .galeria:nth-child(2) img {
+    margin-top: 225px;
+}
+
+.col--galeria .galeria:nth-child(3) img {
+    margin-top: 75px;
+} */
+
+.valores{
+    display: flex;
+    margin: 25px auto;
+}
+
+.valores .valor{
+    margin-bottom: 10px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.valores .valor h3{
+    text-align: left;
+}
+
+.valores .valor p{
+    margin: 25px auto;
+    padding-right: 5px;
+    text-align: left;
+}
+
+.historia .line{
+    width: 150px;
+    height: 4px;
+    background: var(--orange-web);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.valor .line--2{
+    width: 100px;
+    height: 4px;
+    background: var(--oxford-blue);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* SERVICIOS */
+
+.servicios{
+    text-align: center;
+    margin: 30px auto;
+}
+
+.grid--servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px,1fr)); /* Three columns per row */
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.servicio {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 300px; /* Adjust height as needed */
+    border-radius: 8px;
+    background-color: white;
+    transition: transform .2s;
+}
+
+.servicio .h2:hover{
+    transform: scale(1.5);
+}
+
+.servicio::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 33, 61, 0.4);
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.servicio h2 {
+    position: relative; /* Ensures the text is above the overlay */
+    z-index: 5; /* Higher than the overlay */
+    color: var(--platinum);
+}
+
+/* Add unique background images for each box */
+.servicio:nth-child(1) {
+    background-image: url('/Assets/images/Banquetes.jpeg');
+}
+
+
+.servicio:nth-child(2) {
+    background-image: url('/Assets/images/Mobiiario.jpg');
+}
+
+.servicio:nth-child(3) {
+    background-image: url('/Assets/images/coffee\ break.jpg');
+}
+
+.servicio:nth-child(4) {
+    background-image: url('/Assets/images/taquiza.jpg');
+}
+
+.servicio:nth-child(5) {
+    background-image: url('/Assets/images/desayunos\ empresariales.jpg');
+}
+
+.servicio:nth-child(6) {
+    background-image: url('/Assets/images/mesa\ de\ dulces.jpg');
+}
+
+/* catalogo */
+.catalogo {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between columns */
+}
+
+.opciones--gastornomicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Allows equal width for each section */
+    margin: 40px 100px;
+    border: solid 3px var(--oxford-blue);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.col--iconos--gas{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.col--gas{
+    margin: auto 75px;
+}
+
+.opciones--gastornomicas h3 {
+    margin-bottom: 40px; /* Space between the heading and the content */
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: var(--oxford-blue);
+    padding: 25px;
+    color: var(--platinum);
+    margin-top: -25px;
+}
+
+.col--gas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.food img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.food img:hover {
+    transform: scale(1.1);
+}
+
+.food p {
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* <!-- FORMULARIO --> */
+
+.Contacto{
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+/* From Uiverse.io by ammarsaa */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    color: #fff;
+    font-family: var(--body-font);
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: var(--oxford-blue);
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--oxford-blue);
+  }
+  
+  .message, 
+  .signin {
+    font-size: 14.5px;
+    color: var(--oxford-blue);
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .signin a {
+    color: var(--oxford-blue);
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    color: var(--oxford-blue);
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    color: var(--oxford-blue);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    color: var(--oxford-blue);
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .input {
+    font-size: medium;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: var(--oxford-blue);
+  }
+  
+  .submit:hover {
+    background-color: #00bfff96;
+  }
+
+  .formulario{
+    display: flex;
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  .col--form{
+    flex: 50%;
+  }
+
+
+.formulario .col--form:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario .col--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+}
+
+.col--form span{
+    color: var(--oxford-blue);
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.formulario .col--form img {
+    width: 400px; /* Adjust as needed */
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 10px; /* Optional: add some space below the image */
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Optional padding */
+    background-color: var(--oxford-blue);
+}
+
+footer .sm--links {
+    display: flex;
+    gap: 10px; /* Adjust spacing between icons as needed */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+footer .sm--icon i {
+    color: white;
+    font-size: 40px;
+}
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+
+/* Mobile device */
+@media only screen and (max-width:900px){
+    .menu--btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav--links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+
+    .sm--links{
+        display: none;
+    }
+
+    .mobile--menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+
+    .nav--links li{
+        margin: 30px auto;
+    }
+
+    .col--galeria{
+        display: none;
+    }
+
+    .col--texto{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto 20px;
+        height: 100%;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Space between columns */
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .valores{
+        flex-direction: column;
+    }
+
+    .valores .valor{
+
+
+    }
+
+    .header--content h1{
+        font-size: 48px;
+    }
+
+    .historia h1{
+        text-align: center;
+    }
+    
+    .opciones--gastornomicas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%; /* Allows equal width for each section */
+        margin: 40px 100px;
+        border: none;
+        box-shadow: none;
+        border-radius: 15px;
+    }
+
+    .opciones {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Space between columns */
+    }
+
+    .formulario{
+        margin: 50px 10px;
+        flex-direction: column;
+      }
+}
+
+
