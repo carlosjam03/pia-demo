@@ -361,28 +361,28 @@ header .overlay {
 
 /* Add unique background images for each box */
 .servicio:nth-child(1) {
-    background-image: url('/Assets/images/Banquetes.jpeg');
+    background-image: url('Assets/images/Banquetes.jpeg');
 }
 
 
 .servicio:nth-child(2) {
-    background-image: url('/Assets/images/Mobiiario.jpg');
+    background-image: url('Assets/images/Mobiiario.jpg');
 }
 
 .servicio:nth-child(3) {
-    background-image: url('/Assets/images/coffee\ break.jpg');
+    background-image: url('Assets/images/coffee\ break.jpg');
 }
 
 .servicio:nth-child(4) {
-    background-image: url('/Assets/images/taquiza.jpg');
+    background-image: url('Assets/images/taquiza.jpg');
 }
 
 .servicio:nth-child(5) {
-    background-image: url('/Assets/images/desayunos\ empresariales.jpg');
+    background-image: url('Assets/images/desayunos\ empresariales.jpg');
 }
 
 .servicio:nth-child(6) {
-    background-image: url('/Assets/images/mesa\ de\ dulces.jpg');
+    background-image: url('Assets/images/mesa\ de\ dulces.jpg');
 }
 
 /* catalogo */
